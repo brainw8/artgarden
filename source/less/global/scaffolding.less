@@ -1,7 +1,99 @@
 body {
-  font-family: "Open sans", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 16px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 300;
+  color: #000;
   font-style: normal;
-  background-color: #FFFFFF;
+  background-color: @bg-white;
+  width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+
+}
+
+input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 200px;
+  font-size: 15px;
+  line-height: 16px;
+  font-family: Roboto, arial, sans-serif;
+  //color: @text-grey;
+  letter-spacing: -0.05;
+  margin-top: 10px;
+  padding: 10px;
+  border: @bg-yellow solid 3px;
+  border-radius: 16px;
+  outline: none;
+}
+
+.btn {
+  display: block;
+  font-family: Roboto, arial, sans-serif;
+  font-weight: bold;
+  background-color: @bg-yellow;
+  color: black;
+  font-size: 15px;
+  line-height: 16px;
+  border: @bg-yellow solid 3px;
+  border-radius: 16px;
+  padding: 10px;
+
+
+}
+
+.btn-submit {
+  text-transform: uppercase;
+  font-size: 14px;
+  width: 200px;
+  font-weight: 500;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  outline: none;
+  cursor: pointer;
+
+}
+
+form {
+  margin: 0px;
+}
+
+.block-title {
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: 0.05;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 42px;
+}
+
+.block-title::before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 23px;
+  height: 47px;
+  background-image: url(../img/leaf.png)
+
 }
