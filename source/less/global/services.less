@@ -11,20 +11,46 @@
 .services__items {
   margin-top: 28px;
   display: flex;
+  justify-content: space-between;
 
 }
 
 .services__item {
   flex-basis: 262px;
-  border: 1px solid black;
+  //border: 1px solid black;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
+//.services__item:hover {
+//  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  //border-top: 1px solid black;
+//  border-top-left-radius: 5px;
+//  border-top-right-radius: 5px;
+//}
+
 .services__item h3 {
+  text-align: center;
+  margin-bottom: 12px;
   font-size: 17px;
+  line-height: 17px;
+  letter-spacing: 0.005em;
 }
 
 .services__item a {
   color: @text-grey;
+  //text-decoration: none;
 
 }
+
+.services__item a:hover {
+ text-decoration: underline;
+}
+
+.services__item a img:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  //border-top: 1px solid black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
