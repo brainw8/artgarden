@@ -680,6 +680,36 @@ a:visited {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
+.services__modal-window {
+  width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 960px;
+      flex-basis: 960px;
+  min-height: 700px;
+  position: absolute;
+  top: 500px;
+  left: 50%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: -430px;
+  background-color: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+.services__modal-gallery {
+  -ms-flex-preferred-size: 450px;
+      flex-basis: 450px;
+}
+.services__modal-textblock {
+  -ms-flex-preferred-size: 500px;
+      flex-basis: 500px;
+}
 .price-list {
   margin-top: 100px;
   background-color: #fafaf8;
