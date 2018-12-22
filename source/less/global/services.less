@@ -56,9 +56,9 @@
 
 .services__modal-window {
   .container();
-  display: flex;
+  display: none;
   flex-basis: 960px;
-  min-height: 700px;
+  //min-height: 700px;
   position: absolute;
   top: 500px;
   left: 50%;
@@ -69,6 +69,7 @@
   padding: 40px 20px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  line-height: 18px;
 
 }
 
@@ -103,8 +104,40 @@ background-color: #000;
 
 .services__modal-gallery {
   flex-basis: 450px;
+  margin-right: 35px;
+
 }
 
 .services__modal-textblock {
   flex-basis: 500px;
+
+}
+.services__modal-items {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  justify-content: space-between;
+
+
+}
+.services__modal-items li {
+  flex-basis: 120px;
+  min-height: 90px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.services__modal-items a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  background-image: url(../img/increase.png);
+  width: 32px;
+  height: 32px;
+}
+
+.services__modal-window--show {
+  display: flex;
 }
