@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/hes-gallery.css">
+    <script src="js/hes-gallery.js"></script>
+
   </head>
   <body>
     <header class="main-header">
@@ -33,13 +36,14 @@
         <div class="main-header__form">
           <b>Закажите бесплатную консультацию специалиста</b>
           <span>с выездом на Ваш участок:</span>
-          <form action="scripts/index.php" method="post">
+          <form id="fb-form" action="send.php" method="post">
             <label for="name-field">
               <input
                 type="text"
                 id="name-field"
                 name="name"
                 placeholder="Имя"
+                required
               />
             </label>
             <label for="tel-field">
@@ -48,11 +52,17 @@
                 name="tel"
                 id="tel-field"
                 placeholder="Телефон"
+                required
+                value=""
+                class="tel"
               />
             </label>
+            <button id="submit-form" class="btn btn-submit" type="submit">Отправить</button>
 
           </form>
-          <button class="btn btn-submit" type="submit">Отправить</button>
+
+
+
         </div>
       </div>
     </div>
@@ -115,7 +125,7 @@
 
 
           <h2 class="block-title">Галерея наших работ</h2>
-        <nav class="gallery__nav">
+        <!-- <nav class="gallery__nav">
           <ul class="gallery__nav-items">
             <li class="gallery__nav-item"><a href="#">Проектирование</a></li>
             <li class="gallery__nav-item gallery__nav-item--active"><a href="#">Благоустройство и <br> озеленение</a></li>
@@ -123,47 +133,186 @@
             <li class="gallery__nav-item"><a href="#">Системы освещения</a></li>
             <li class="gallery__nav-item"><a href="#">Уходные работы</a></li>
           </ul>
-        </nav>
-        <ul class="gallery__images">
-          <li class="gallery__image">
-            <img src="img/photo-gallery/Фото 1.png" alt="фотографии наших работ" />
+        </nav> -->
+
+        <ul class="gallery__images hes-gallery"
+                data-wrap="false"
+               data-img-count="1">
+          <li class="gallery__image ">
+            <img src="img/photo-gallery/Image01.jpg" alt="фотографии наших работ" />
           </li>
           <li class="gallery__image">
-            <img src="img/photo-gallery/Фото 2.png" alt="фотографии наших работ" />
+            <img src="img/photo-gallery/Image02.jpg" alt="фотографии наших работ" />
           </li>
           <li class="gallery__image">
-            <img src="img/photo-gallery/Фото 3.png" alt="фотографии наших работ" />
+            <img src="img/photo-gallery/Image03.jpg" alt="фотографии наших работ" />
           </li>
           <li class="gallery__image">
-            <img src="img/photo-gallery/Фото 4.png" alt="фотографии наших работ" />
+            <img src="img/photo-gallery/Image04.jpg" alt="фотографии наших работ" />
           </li>
 
           <li class="gallery__image">
-            <img src="img/photo-gallery/Фото 5.png" alt="фотографии наших работ" />
+            <img src="img/photo-gallery/Image05.jpg" alt="фотографии наших работ" />
           </li>
           <li class="gallery__image">
-            <img src="img/photo-gallery/Фото 6.png" alt="фотографии наших работ" />
+            <img src="img/photo-gallery/Image06.jpg" alt="фотографии наших работ" />
           </li>
           <li class="gallery__image">
-            <img src="img/photo-gallery/Фото 7.png" alt="фотографии наших работ" />
+            <img src="img/photo-gallery/Image07.jpg" alt="фотографии наших работ" />
           </li>
           <li class="gallery__image">
-            <img src="img/photo-gallery/Фото 8.png" alt="фотографии наших работ" />
+            <img src="img/photo-gallery/Image08.jpg" alt="фотографии наших работ" />
           </li>
 
           <li class="gallery__image">
-            <img src="img/photo-gallery/Фото 9.png" alt="фотографии наших работ" />
+            <img src="img/photo-gallery/Image09.jpg" alt="фотографии наших работ" />
           </li>
           <li class="gallery__image">
-            <img src="img/photo-gallery/Фото 10.png" alt="фотографии наших работ" />
+            <img src="img/photo-gallery/Image10.jpg" alt="фотографии наших работ" />
           </li>
           <li class="gallery__image">
-            <img src="img/photo-gallery/Фото 11.jpg" alt="фотографии наших работ" />
+            <img src="img/photo-gallery/Image11.jpg" alt="фотографии наших работ" />
           </li>
           <li class="gallery__image">
-            <img src="img/photo-gallery/Фото 12.png" alt="фотографии наших работ" />
+            <img src="img/photo-gallery/Image12.jpg" alt="фотографии наших работ" />
           </li>
         </ul>
+
+          <ul class="gallery__images hes-gallery"
+                data-wrap="false"
+               data-img-count="1">
+            <li class="gallery__image">
+              <img src="img/photo-gallery/Image13.jpg" alt="фотографии наших работ" />
+            </li>
+            <li class="gallery__image">
+              <img src="img/photo-gallery/Image14.jpg" alt="фотографии наших работ" />
+            </li>
+            <li class="gallery__image">
+              <img src="img/photo-gallery/Image15.jpg" alt="фотографии наших работ" />
+            </li>
+            <li class="gallery__image">
+              <img src="img/photo-gallery/Image16.jpg" alt="фотографии наших работ" />
+            </li>
+
+            <li class="gallery__image">
+              <img src="img/photo-gallery/Image17.jpg" alt="фотографии наших работ" />
+            </li>
+            <li class="gallery__image">
+              <img src="img/photo-gallery/Image18.jpg" alt="фотографии наших работ" />
+            </li>
+            <li class="gallery__image">
+              <img src="img/photo-gallery/Image19.jpg" alt="фотографии наших работ" />
+            </li>
+            <li class="gallery__image">
+              <img src="img/photo-gallery/Image20.jpg" alt="фотографии наших работ" />
+            </li>
+
+            <li class="gallery__image">
+              <img src="img/photo-gallery/Image21.jpg" alt="фотографии наших работ" />
+            </li>
+            <li class="gallery__image">
+              <img src="img/photo-gallery/Image22.jpg" alt="фотографии наших работ" />
+            </li>
+            <li class="gallery__image">
+              <img src="img/photo-gallery/Image23.jpg" alt="фотографии наших работ" />
+            </li>
+            <li class="gallery__image">
+              <img src="img/photo-gallery/Image24.jpg" alt="фотографии наших работ" />
+            </li>
+
+        </ul>
+
+
+        <ul class="gallery__images hes-gallery"
+        data-wrap="false"
+       data-img-count="1">
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image25.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image26.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image27.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image28.jpg" alt="фотографии наших работ" />
+    </li>
+
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image29.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image30.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image31.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image32.jpg" alt="фотографии наших работ" />
+    </li>
+
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image33.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image34.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image35.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image36.jpg" alt="фотографии наших работ" />
+    </li>
+
+</ul>
+<ul class="gallery__images hes-gallery"
+        data-wrap="false"
+       data-img-count="1"
+  >
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image37.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image38.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image39.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image40.jpg" alt="фотографии наших работ" />
+    </li>
+
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image41.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image42.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image43.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image44.jpg" alt="фотографии наших работ" />
+    </li>
+
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image45.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image46.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image47.jpg" alt="фотографии наших работ" />
+    </li>
+    <li class="gallery__image">
+      <img src="img/photo-gallery/Image48.jpg" alt="фотографии наших работ" />
+    </li>
+
+</ul>
+
+        <a class="gallery__more-works" href="#">больше работ</a>
+
       </section>
       <section class="work-scheme">
           <h2 class="block-title">Как мы работаем?</h2>
@@ -212,13 +361,15 @@
         <div class="send-form__left">
           <h2>Остались вопросы?</h2>
           <p>Закажите бесплатную консультацию</p>
-          <form action="scripts/index.php" method="post">
+          <form id="fb-form" action="send.php" method="post">
+
             <label for="name-field">
               <input
                 type="text"
                 id="name-field"
                 name="name"
                 placeholder="Имя"
+                required
               />
             </label>
             <label for="tel-field">
@@ -227,8 +378,10 @@
                 name="tel"
                 id="tel-field"
                 placeholder="Телефон"
+                required
+                value=""
+                class="tel"
               />
-            </label>
 
           </form>
           <button class="btn btn-submit" type="submit">Отправить</button>
@@ -399,7 +552,119 @@
             </p>
           </div>
         </section>
+
+        <section class="services__modal-window services__landscaping">
+          <div class="services__modal-window-close"></div>
+          <div class="services__modal-gallery">
+            <img class="services__modal-main-photo" src="img/services-gallery/project-b1.jpg" alt="Large image" >
+            <ul  class="services__modal-items">
+
+              <li><a href="img/services-gallery/project-b1.jpg" title="image 2"><img src="img/services-gallery/project-2.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b1.jpg" title="image 3"><img src="img/services-gallery/project-3.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b1.jpg" title="image 4"><img src="img/services-gallery/project-4.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b1.jpg" title="image 5"><img src="img/services-gallery/project-5.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b6.jpg" title="image 6"><img src="img/services-gallery/project-6.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b7.jpg" title="image 7"><img src="img/services-gallery/project-7.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b8.jpg" title="image 8"><img src="img/services-gallery/project-8.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b9.jpg" title="image 9"><img src="img/services-gallery/project-9.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b10.jpg" title="image 10"><img src="img/services-gallery/project-10.jpg" alt="preview"></a></li>
+            </ul>
+          </div>
+          <div class="services__modal-textblock ">
+            <h2 class="services__modal-title">
+                Благоустройство
+            </h2>
+            <p>
+
+              !!!!Благоустройство!!!
+              Создание грамотного проекта ландшафта — один из важных этапов благоустройства территории. <br>
+             <strong> Студия «АРТ-Гарден» </strong>предлагает заказать услуги по ландшафтному проектированию  во Владимире и области.
+              Тщательно проработанный <strong>ландшафтный проект</strong> определяет внешний вид участка и избавляет от потенциальных проблем: необходимости переделок, сложностей с уходом и др. <br>
+              Предпроектный анализ территории - Геодезическая съемка: топографический план с существующими на участке зданиями, насаждениями, коммуникационными колодцами, с высотными отметками рельефа и горизонталями.
+              Ландшафтный дизайнер обсуждает с заказчиком его предпочтения и представления о дизайн-проекте сада, территории загородного дома или дачного участка, сроках выполнения и бюджете предстоящих ландшафтных работ.
+
+              Следующий этап — составление технического задания на ландшафтное проектирование участка. Эта стадия включает разработку общей концепции проекта с указанием основных функциональных зон и ландшафтных групп. В проекте предусматривают взаимосвязь и удобное размещение всех сооружений и элементов сада, учитывая образ жизни владельцев, интересы каждого члена семьи. Только таким образом можно сделать участок красивым , удобным, а самое главное - приятным для отдыха и работы.
+
+            </p>
+
+          </div>
+        </section>
+
+        <section class="services__modal-window services__landscaping">
+          <div class="services__modal-window-close"></div>
+          <div class="services__modal-gallery">
+            <img class="services__modal-main-photo" src="img/services-gallery/project-b1.jpg" alt="Large image" >
+            <ul  class="services__modal-items">
+
+              <li><a href="img/services-gallery/project-b1.jpg" title="image 2"><img src="img/services-gallery/project-2.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b1.jpg" title="image 3"><img src="img/services-gallery/project-3.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b1.jpg" title="image 4"><img src="img/services-gallery/project-4.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b1.jpg" title="image 5"><img src="img/services-gallery/project-5.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b6.jpg" title="image 6"><img src="img/services-gallery/project-6.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b7.jpg" title="image 7"><img src="img/services-gallery/project-7.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b8.jpg" title="image 8"><img src="img/services-gallery/project-8.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b9.jpg" title="image 9"><img src="img/services-gallery/project-9.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b10.jpg" title="image 10"><img src="img/services-gallery/project-10.jpg" alt="preview"></a></li>
+            </ul>
+          </div>
+          <div class="services__modal-textblock ">
+            <h2 class="services__modal-title">
+                Благоустройство
+            </h2>
+            <p>
+
+              !!!!Благоустройство!!!
+              Создание грамотного проекта ландшафта — один из важных этапов благоустройства территории. <br>
+             <strong> Студия «АРТ-Гарден» </strong>предлагает заказать услуги по ландшафтному проектированию  во Владимире и области.
+              Тщательно проработанный <strong>ландшафтный проект</strong> определяет внешний вид участка и избавляет от потенциальных проблем: необходимости переделок, сложностей с уходом и др. <br>
+              Предпроектный анализ территории - Геодезическая съемка: топографический план с существующими на участке зданиями, насаждениями, коммуникационными колодцами, с высотными отметками рельефа и горизонталями.
+              Ландшафтный дизайнер обсуждает с заказчиком его предпочтения и представления о дизайн-проекте сада, территории загородного дома или дачного участка, сроках выполнения и бюджете предстоящих ландшафтных работ.
+
+              Следующий этап — составление технического задания на ландшафтное проектирование участка. Эта стадия включает разработку общей концепции проекта с указанием основных функциональных зон и ландшафтных групп. В проекте предусматривают взаимосвязь и удобное размещение всех сооружений и элементов сада, учитывая образ жизни владельцев, интересы каждого члена семьи. Только таким образом можно сделать участок красивым , удобным, а самое главное - приятным для отдыха и работы.
+
+            </p>
+
+          </div>
+        </section>
+
+        <section class="services__modal-window services__landscaping">
+          <div class="services__modal-window-close"></div>
+          <div class="services__modal-gallery">
+            <img class="services__modal-main-photo" src="img/services-gallery/project-b1.jpg" alt="Large image" >
+            <ul  class="services__modal-items">
+
+              <li><a href="img/services-gallery/project-b1.jpg" title="image 2"><img src="img/services-gallery/project-2.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b1.jpg" title="image 3"><img src="img/services-gallery/project-3.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b1.jpg" title="image 4"><img src="img/services-gallery/project-4.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b1.jpg" title="image 5"><img src="img/services-gallery/project-5.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b6.jpg" title="image 6"><img src="img/services-gallery/project-6.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b7.jpg" title="image 7"><img src="img/services-gallery/project-7.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b8.jpg" title="image 8"><img src="img/services-gallery/project-8.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b9.jpg" title="image 9"><img src="img/services-gallery/project-9.jpg" alt="preview"></a></li>
+              <li><a href="img/services-gallery/project-b10.jpg" title="image 10"><img src="img/services-gallery/project-10.jpg" alt="preview"></a></li>
+            </ul>
+          </div>
+          <div class="services__modal-textblock ">
+            <h2 class="services__modal-title">
+                Благоустройство
+            </h2>
+            <p>
+
+              !!!!Благоустройство!!!
+              Создание грамотного проекта ландшафта — один из важных этапов благоустройства территории. <br>
+             <strong> Студия «АРТ-Гарден» </strong>предлагает заказать услуги по ландшафтному проектированию  во Владимире и области.
+              Тщательно проработанный <strong>ландшафтный проект</strong> определяет внешний вид участка и избавляет от потенциальных проблем: необходимости переделок, сложностей с уходом и др. <br>
+              Предпроектный анализ территории - Геодезическая съемка: топографический план с существующими на участке зданиями, насаждениями, коммуникационными колодцами, с высотными отметками рельефа и горизонталями.
+              Ландшафтный дизайнер обсуждает с заказчиком его предпочтения и представления о дизайн-проекте сада, территории загородного дома или дачного участка, сроках выполнения и бюджете предстоящих ландшафтных работ.
+
+              Следующий этап — составление технического задания на ландшафтное проектирование участка. Эта стадия включает разработку общей концепции проекта с указанием основных функциональных зон и ландшафтных групп. В проекте предусматривают взаимосвязь и удобное размещение всех сооружений и элементов сада, учитывая образ жизни владельцев, интересы каждого члена семьи. Только таким образом можно сделать участок красивым , удобным, а самое главное - приятным для отдыха и работы.
+
+            </p>
+
+          </div>
+        </section>
       <script src="js/main.js"></script>
+
 
       <div id="overlay"></div>
   </body>
