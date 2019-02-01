@@ -125,9 +125,19 @@ background-color: #000;
   min-height: 90px;
   margin-top: 20px;
   position: relative;
+  cursor: pointer;
 }
 
-.services__modal-items a::after {
+.services__modal-items img {
+  position: relative;
+  z-index: 1;
+}
+.services__modal-textblock ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.services__modal-items li::after {
   content: "";
   display: block;
   position: absolute;
@@ -136,6 +146,7 @@ background-color: #000;
   background-image: url(../img/increase.png);
   width: 32px;
   height: 32px;
+  z-index: 2;
 }
 
 .services__modal-window--show {

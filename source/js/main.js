@@ -56,6 +56,7 @@ var i;
 var link = document.querySelectorAll(".services__item a");
 var popup = document.querySelectorAll(".services__modal-window");
 var close = document.querySelectorAll(".services__modal-window-close");
+var bigimg = document.querySelectorAll(".services__modal-main-photo");
 
 //var link = document.querySelector(".services a");
 link[0].addEventListener("click", function(event) {
@@ -63,6 +64,7 @@ link[0].addEventListener("click", function(event) {
   nmodal = 0;
   //console.log("клик по ссылке");
   popup[nmodal].classList.add("services__modal-window--show");
+  bigimg[nmodal].classList.add("bigimage-show");
   document.getElementById("overlay").style.display = "block";
 });
 link[1].addEventListener("click", function(event) {
@@ -70,6 +72,7 @@ link[1].addEventListener("click", function(event) {
   nmodal = 1;
   //console.log("клик по ссылке");
   popup[nmodal].classList.add("services__modal-window--show");
+  bigimg[nmodal].classList.add("bigimage-show");
   document.getElementById("overlay").style.display = "block";
 });
 link[2].addEventListener("click", function(event) {
@@ -77,27 +80,31 @@ link[2].addEventListener("click", function(event) {
   nmodal = 2;
   //console.log("клик по ссылке");
   popup[nmodal].classList.add("services__modal-window--show");
+  bigimg[nmodal].classList.add("bigimage-show");
   document.getElementById("overlay").style.display = "block";
 });
 link[3].addEventListener("click", function(event) {
   event.preventDefault();
-  nmodal = 2;
+  nmodal = 3;
   //console.log("клик по ссылке");
   popup[nmodal].classList.add("services__modal-window--show");
+  bigimg[nmodal].classList.add("bigimage-show");
   document.getElementById("overlay").style.display = "block";
 });
 link[4].addEventListener("click", function(event) {
   event.preventDefault();
-  nmodal = 2;
+  nmodal = 4;
   //console.log("клик по ссылке");
   popup[nmodal].classList.add("services__modal-window--show");
+  bigimg[nmodal].classList.add("bigimage-show");
   document.getElementById("overlay").style.display = "block";
 });
 link[5].addEventListener("click", function(event) {
   event.preventDefault();
-  nmodal = 2;
+  nmodal = 5;
   //console.log("клик по ссылке");
   popup[nmodal].classList.add("services__modal-window--show");
+  bigimg[nmodal].classList.add("bigimage-show");
   document.getElementById("overlay").style.display = "block";
 });
 
@@ -108,6 +115,8 @@ close[i].addEventListener("click", function(event) {
   document.getElementById("overlay").style.display = "none";
   //console.log("клик по сслке");
   popup[nmodal].classList.remove("services__modal-window--show");
+  bigimg[nmodal].classList.add("bigimage-show");
+  bigimg[nmodal].classList.toggle("bigimage-show");
 });
 }
 
@@ -115,40 +124,48 @@ close[i].addEventListener("click", function(event) {
 //end
 
 // // services gallery
-var largeImg = document.querySelectorAll(".services__modal-main-photo");
-var thumbs = document.querySelectorAll(".services__modal-items");
+// var largeImg = document.querySelectorAll(".services__modal-main-photo");
+// var thumbs = document.querySelectorAll(".services__modal-items");
 
-for (var i = 0; i < thumbs.length; i ++) {
-  thumbs[i].onclick = function(e) {
-  var target = e.target;
+// for (var i = 0; i < thumbs.length; i ++) {
+//   thumbs[i].onclick = function(e) {
+//   var target = e.target;
 
-  while (target != this) {
+//   while (target != this) {
 
-    if (target.nodeName == 'A') {
-      showThumbnail(target.href, target.title);
-      return false;
-    }
+//     if (target.nodeName == 'A') {
+//       showThumbnail(target.href, target.title);
+//       return false;
+//     }
 
-    target = target.parentNode;
-  }
+//     target = target.parentNode;
+//   }
 
+// }
+
+// var imgs = thumbs[0].getElementsByTagName('img');
+// for (var nnm = 0; nnm < imgs.length; nnm++) {
+//   var url = imgs[nnm].parentNode.href;
+//   var img = document.createElement('img');
+//   img.src = url;
+//  }
+// }
+
+// function showThumbnail(href, title) {
+//   for (var i = 0; i < largeImg.length; i++) {
+//   largeImg[i].src = href;
+//   largeImg[i].alt = title;
+
+//   }
+// }
+
+// //end
+
+//Service image gallery 2
+
+function setBigImage(foto) {
+  document.querySelector(".bigimage-show").src = foto.childNodes[0].src;
 }
-
-var imgs = thumbs[0].getElementsByTagName('img');
-for (var nnm = 0; nnm < imgs.length; nnm++) {
-  var url = imgs[nnm].parentNode.href;
-  var img = document.createElement('img');
-  img.src = url;
- }
-}
-
-function showThumbnail(href, title) {
-  for (var i = 0; i < largeImg.length; i++) {
-  largeImg[i].src = href;
-  largeImg[i].alt = title;
-  }
-}
-
 //end
 
 //gallery more works
@@ -181,4 +198,3 @@ worklink.addEventListener("click", function(event) {
 
 });
 //end
-

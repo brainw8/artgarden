@@ -12,6 +12,7 @@ body {
   width: 1400px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 img {
@@ -123,4 +124,20 @@ form {
   background: rgba(0,0,0,0.5);
   z-index: 2;
   //cursor: pointer; /* Add a pointer on hover */
+}
+
+.go__ontop {
+  background-image: url(../img/up.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  // background-color: red;
+  position: fixed;
+  bottom: 250;
+  left: 50%;
+  margin-left: 650px;
+  width: 32px;
+  height: 32px;
+  z-index: 200;
+  display: block;
+
 }
