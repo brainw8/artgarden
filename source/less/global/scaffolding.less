@@ -127,9 +127,9 @@ form {
 }
 
 .go__ontop {
-  background-image: url(../img/up.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  //background-image: url(../img/up.svg);
+  //background-repeat: no-repeat;
+  //background-position: center;
   // background-color: red;
   position: fixed;
   bottom: 250;
@@ -140,4 +140,16 @@ form {
   z-index: 200;
   display: block;
 
+}
+
+.go__ontop svg {
+  fill: #000;
+  transition: fill 0.5s;
+}
+
+.go__ontop svg:hover {
+
+  // fill: #8f8f8f;
+  fill: #fab500;
+  //background-color: aqua;
 }

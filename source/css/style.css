@@ -518,9 +518,6 @@ a:visited {
   z-index: 2;
 }
 .go__ontop {
-  background-image: url(../img/up.svg);
-  background-repeat: no-repeat;
-  background-position: center;
   position: fixed;
   bottom: 250;
   left: 50%;
@@ -529,6 +526,14 @@ a:visited {
   height: 32px;
   z-index: 200;
   display: block;
+}
+.go__ontop svg {
+  fill: #000;
+  -webkit-transition: fill 0.5s;
+  transition: fill 0.5s;
+}
+.go__ontop svg:hover {
+  fill: #fab500;
 }
 .main-header {
   overflow: hidden;
@@ -1151,6 +1156,11 @@ a:visited {
   height: 44px;
   margin-top: auto;
 }
-.main-footer__social-item:hover {
-  background-color: #285603;
+.main-footer__social-item svg {
+  fill: #285603;
+  -webkit-transition: fill 200ms;
+  transition: fill 200ms;
+}
+.main-footer__social-item svg:hover {
+  fill: #fab500;
 }
