@@ -567,16 +567,8 @@ a:visited {
   position: relative;
   font-size: 18px;
   letter-spacing: 0.25;
-  -ms-flex-preferred-size: 125px;
-      flex-basis: 125px;
-}
-.main-nav__logo span {
-  display: block;
-  position: absolute;
-  top: 8;
-  right: 0;
-  width: 71px;
-  text-transform: uppercase;
+  -ms-flex-preferred-size: 110px;
+      flex-basis: 110px;
 }
 .main-nav__items {
   display: -webkit-box;
@@ -604,7 +596,7 @@ a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 50px;
+  margin-top: 60px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-box-pack: start;
@@ -1115,7 +1107,7 @@ a:visited {
 }
 .main-footer__logo {
   margin-top: 35px;
-  width: 125px;
+  width: 100px;
   position: relative;
 }
 .main-footer__logo img {
@@ -1133,7 +1125,8 @@ a:visited {
   display: block;
   font-size: 15px;
   line-height: 18px;
-  margin-top: 85px;
+  margin-top: 105px;
+  margin-left: 83px;
 }
 .main-footer__right {
   font-size: 24px;

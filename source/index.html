@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/hes-gallery.css">
     <script src="js/hes-gallery.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.5/jquery.min.js"></script> -->
+
 
   </head>
   <body>
@@ -18,8 +18,11 @@
       <div class="container">
         <nav class="main-nav">
           <div class="main-nav__logo">
-            <img src="img/logo.png" alt="логотип" /><span>Арт Гарден</span>
+            <img src="img/logo18.png"  alt="логотип" />
+            <!-- <span>Арт Гарден</span> -->
           </div>
+
+
           <ul class="main-nav__items">
             <!-- <li class="main-nav__item"><a href="#">Главная</a></li> -->
             <li class="main-nav__item"><a href="#services">Услуги</a></li>
@@ -60,7 +63,7 @@
                 class="tel"
               />
             </label>
-            <button id="submit-form" class="btn btn-submit" type="submit">Отправить</button>
+            <button id="submit-form" class="btn btn-submit" name ="submit" type="submit">Отправить</button>
 
           </form>
 
@@ -128,15 +131,7 @@
 
 
           <h2 class="block-title">Галерея наших работ</h2>
-        <!-- <nav class="gallery__nav">
-          <ul class="gallery__nav-items">
-            <li class="gallery__nav-item"><a href="#">Проектирование</a></li>
-            <li class="gallery__nav-item gallery__nav-item--active"><a href="#">Благоустройство и <br> озеленение</a></li>
-            <li class="gallery__nav-item"><a href="#">Системы полива</a></li>
-            <li class="gallery__nav-item"><a href="#">Системы освещения</a></li>
-            <li class="gallery__nav-item"><a href="#">Уходные работы</a></li>
-          </ul>
-        </nav> -->
+
 
         <ul class="gallery__images hes-gallery"
                 data-wrap="false"
@@ -404,9 +399,9 @@
         <div class="main-footer__wrapper">
         <div class="main-footer__left">
           <div class="main-footer__logo">
-            <img src="./img/logo.png" alt="логотип" /> <span class="main-footer__logo-name">Арт Гарден</span>
+             <img src="./img/logo6.png" alt="логотип" /> <!--<span class="main-footer__logo-name">Арт Гарден</span> -->
           </div>
-          <span class="main-footer__copyright">© 2018 ArtGarden</span>
+
         </div>
         <div class="main-footer__middle">
           <ul class="main-footer__social-items">
@@ -444,6 +439,7 @@
         </div>
         <div class="main-footer__right">
           <span class="main-footer__tel">+7 (920) 628-50-89</span>
+          <span class="main-footer__copyright">© 2018 ArtGarden</span>
         </div>
       </div>
       </footer>
@@ -663,18 +659,18 @@
         <section class="services__modal-window services__landscaping">
           <div class="services__modal-window-close"></div>
           <div class="services__modal-gallery">
-            <img class="services__modal-main-photo" src="img/services-gallery/project-b1.jpg" alt="Large image" >
+            <img class="services__modal-main-photo" src="img/services-gallery/gardener-b1.jpg" alt="Large image" >
             <ul  class="services__modal-items">
 
-              <li onclick = "setBigImage(this)"><img src="img/services-gallery/project-2.jpg" alt="preview"></a></li>
-              <li onclick = "setBigImage(this)"><img src="img/services-gallery/project-3.jpg" alt="preview"></a></li>
-              <li onclick = "setBigImage(this)"><img src="img/services-gallery/project-4.jpg" alt="preview"></a></li>
-              <li onclick = "setBigImage(this)"><img src="img/services-gallery/project-5.jpg" alt="preview"></a></li>
-              <li onclick = "setBigImage(this)"><img src="img/services-gallery/project-6.jpg" alt="preview"></a></li>
-              <li onclick = "setBigImage(this)"><img src="img/services-gallery/project-7.jpg" alt="preview"></a></li>
-              <li onclick = "setBigImage(this)"><img src="img/services-gallery/project-8.jpg" alt="preview"></a></li>
-              <li onclick = "setBigImage(this)"><img src="img/services-gallery/project-9.jpg" alt="preview"></a></li>
-              <li onclick = "setBigImage(this)"><img src="img/services-gallery/project-10.jpg" alt="preview"></a></li>
+              <li onclick = "setBigImage(this)"><img src="img/services-gallery/gardener-b1.jpg" alt="preview"></a></li>
+              <li onclick = "setBigImage(this)"><img src="img/services-gallery/gardener-b2.jpg" alt="preview"></a></li>
+              <li onclick = "setBigImage(this)"><img src="img/services-gallery/gardener-b3.jpg" alt="preview"></a></li>
+              <li onclick = "setBigImage(this)"><img src="img/services-gallery/gardener-b4.jpg" alt="preview"></a></li>
+              <li onclick = "setBigImage(this)"><img src="img/services-gallery/gardener-b5.jpg" alt="preview"></a></li>
+              <li onclick = "setBigImage(this)"><img src="img/services-gallery/gardener-b6.jpg" alt="preview"></a></li>
+              <li onclick = "setBigImage(this)"><img src="img/services-gallery/gardener-b7.jpg" alt="preview"></a></li>
+              <li onclick = "setBigImage(this)"><img src="img/services-gallery/gardener-b8.jpg" alt="preview"></a></li>
+              <li onclick = "setBigImage(this)"><img src="img/services-gallery/gardener-b9.jpg" alt="preview"></a></li>
             </ul>
           </div>
           <div class="services__modal-textblock ">
@@ -722,7 +718,22 @@ $(document).on("click", ".go__ontop", function(e) {
 });
       </script>
 
+<script>
+	$("#fb-form").submit(function(e) {
+		e.preventDefault();
+	    $.ajax({
+	    	   type: "POST",
+	           url: "send.php",
+	           data: $("#fb-form").serialize(),
+	           success: function(data) {
+					$('.results').html(data);
+			   }
+	         });
+
+	});
+</script>
 
 
+<div class="results"></div>
   </body>
 </html>
