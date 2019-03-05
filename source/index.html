@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>ArtGarden Ландшафтный дизайн</title>
+    <title>Ландшафтный дизайн, озеленение, благоустройство</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Ландшафтная компания АртГарден33. Работы по озеленению и благоустройству территории. Системы автоматического полива.">
+    <meta name="keywords" content="ландшафтный дизайн, проект сада, ландшафтный дизайн под ключ, ландшафтный дизайн Владимир, ландшафтный дизайн студия, ландшафтная студия,  ландшафтный дизайн участка, услуги ландшафтного дизайнера" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/hes-gallery.css">
@@ -19,19 +21,19 @@
         <nav class="main-nav">
           <div class="main-nav__logo">
             <img src="img/logo18.png"  alt="логотип" />
-            <!-- <span>Арт Гарден</span> -->
+
           </div>
 
 
           <ul class="main-nav__items">
-            <!-- <li class="main-nav__item"><a href="#">Главная</a></li> -->
+
             <li class="main-nav__item"><a href="#services">Услуги</a></li>
             <li class="main-nav__item"><a href="#price">Цены</a></li>
             <li class="main-nav__item"><a href="#gallery">Фотокаталог</a></li>
-            <!-- <li class="main-nav__item"><a href="#">Схема работ</a></li> -->
+
             <li class="main-nav__item"><a href="#contacts">Контакты</a></li>
           </ul>
-          <div class="main-nav__tel">+7 (920) 628-50-89</div>
+          <div class="main-nav__tel">+7 (904) 659-7732</div>
         </nav>
         <div class="main-header__content">
         <div class="main-header__description">
@@ -39,37 +41,7 @@
 
           <span> Во Владимире <br> и Владимирской области</span>
         </div>
-        <div class="main-header__form">
-          <b>Закажите бесплатную консультацию специалиста</b>
-          <span>с выездом на Ваш участок:</span>
-          <form id="fb-form" action="send.php" method="post">
-            <label for="name-field">
-              <input
-                type="text"
-                id="name-field"
-                name="name"
-                placeholder="Имя"
-                required
-              />
-            </label>
-            <label for="tel-field">
-              <input
-                type="tel"
-                name="tel"
-                id="tel-field"
-                placeholder="Телефон"
-                required
-                value=""
-                class="tel"
-              />
-            </label>
-            <button id="submit-form" class="btn btn-submit" name ="submit" type="submit">Отправить</button>
 
-          </form>
-
-
-
-        </div>
       </div>
     </div>
     </header>
@@ -121,7 +93,9 @@
         <div class="price-list__wrapper">
         <div class="price-list__left">
           <h2>Наши цены приятно удивят Вас!</h2>
-          <button class="btn">Скачать прайс-лист</button>
+          <a href="prices2019.pdf">
+          <button class="btn">Скачать прайс-лист</button></a>
+          </a>
         </div>
         <div class="price-list__right"></div>
       </div>
@@ -319,7 +293,7 @@
 
           <div class="work-scheme__item-img work-scheme__item-img--call"></div>
           <h3>Звонок или заявка</h3>
-          <p>Позвоните нам по номеру +7 (920) 628-50-89 или</p>
+          <p>Позвоните нам по номеру <br>+7 (904) 659-7732 или</p>
           <button class="btn">Оставте заявку</button>
         </article>
         <article class="work-scheme__item">
@@ -382,24 +356,28 @@
               />
 
           </form>
-          <button class="btn btn-submit" type="submit">Отправить</button>
+          <button id="submit-form" class="btn btn-submit" type="submit" name ="submit">Отправить</button>
+          <div class="results"></div>
         </div>
         <div class="send-form__right"></div>
+
       </div>
+
       </article>
+
       <section id="contacts" class="contacts">
         <div class="contacts__adress">
           <h3 class="block-title">Контакты</h3>
-          <p>600000, Владимир <br> Ул. Дворянская, д. 27А</p>
-          <span class="contacts__adress-tel">+7 (920) 628-50-89</span>
-          <span class="contacts__adress-mail">info@artgarden.ru</span>
+          <p></p>
+          <span class="contacts__adress-tel">Телефон: +7 (904) 659-7732</span>
+          <span class="contacts__adress-mail">Email: info@artgarden.ru</span>
         </div>
       </section>
       <footer class="main-footer">
         <div class="main-footer__wrapper">
         <div class="main-footer__left">
           <div class="main-footer__logo">
-             <img src="./img/logo18.png" alt="логотип" /> <!--<span class="main-footer__logo-name">Арт Гарден</span> -->
+             <img src="./img/logo18.png" alt="логотип" />
           </div>
 
         </div>
@@ -438,7 +416,7 @@
           </ul>
         </div>
         <div class="main-footer__right">
-          <span class="main-footer__tel">+7 (920) 628-50-89</span>
+          <span class="main-footer__tel">+7 (904) 659-7732</span>
           <span class="main-footer__copyright">© 2018 ArtGarden</span>
         </div>
       </div>
@@ -734,6 +712,6 @@ $(document).on("click", ".go__ontop", function(e) {
 </script>
 
 
-<div class="results"></div>
+
   </body>
 </html>
